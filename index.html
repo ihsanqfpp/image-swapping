@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGE SWAPPING IN JAVASCRIPT</title>
+    <style>
+        h1,
+        p{
+            text-align: center;
+        }
+        .gallery{
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 100px;
+        }
+        .gallery img{
+            width: 100px;
+            cursor: pointer;
+        }
+        .main-img{
+            display: block;
+            margin: 20px auto;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Swapping Gallery</h1>
+    <div class="gallery">
+        <img src="/images/img1.jpg" alt="img 1" onclick="swapImage('/images/img1.jpg')">
+        <img src="/images/img2.jpg" alt="img 2" onclick="swapImage('/images/img2.jpg')">
+        <img src="/images/img3.jpg" alt="img 2" onclick="swapImage('/images/img3.jpg')">
+    </div>
+    <p>Selected Image</p>
+    <img id="mainImg" class="main-img" src="/images/img1.jpg" alt="mainImg">
+</body>
+<script>
+function swapImage(newImageSrc){
+    let mainImg = document.getElementById("mainImg");
+    mainImg.src = newImageSrc;
+
+}
+</script>
+</html>
